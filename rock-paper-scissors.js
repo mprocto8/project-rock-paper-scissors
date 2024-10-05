@@ -1,22 +1,23 @@
 console.log("Javascript file successfully linked")
 
-function getRandomInt () {
-    return Math.floor(Math.random() * 100);
+function getRandomInt (max) {
+    return Math.floor(Math.random() * max);
 }
-let num = getRandomInt();
+let num = getRandomInt(3);
 
 function getComputerChoice () {
-    if (num <= 33) {
-        console.log("Rock");
-    } else if (num >= 34 && num <= 66) {
-        console.log("Paper");
-    } else if (num >= 67) {
-        console.log("Scissors");
+    if (num == 0) {
+        return "Rock";
+    } else if (num == 1) {
+        return "Paper";
+    } else {
+        return "Scissors";
     }
 }
 
-let cpuChoice = getComputerChoice();
+console.log(getComputerChoice());
 
 function getHumanChoice () {
-    prompt("Choose Rock, Paper, or Scissors by inputting 1, 2, or 3", "type 1, 2, or 3")
+    let humanChoice = prompt("Choose Rock, Paper, or Scissors by inputting 1, 2, or 3", 
+        "type 1, 2, or 3")
 }
