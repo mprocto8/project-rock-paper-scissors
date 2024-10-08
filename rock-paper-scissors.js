@@ -18,6 +18,14 @@ function getComputerChoice () {
 console.log(getComputerChoice());
 
 function getHumanChoice () {
-    let humanChoice = prompt("Choose Rock, Paper, or Scissors by inputting 1, 2, or 3", 
-        "type 1, 2, or 3")
+    let humanChoice = prompt("Choose Rock, Paper, or Scissors by inputting 1, 2, or 3",  "type 1, 2, or 3")
+    if (humanChoice == 1) {
+        return "Rock";
+    } else if (humanChoice == 2) {
+        return "Paper";
+    } else {
+        return "Scissors";
+    }
 }
+
+console.log(getHumanChoice());
