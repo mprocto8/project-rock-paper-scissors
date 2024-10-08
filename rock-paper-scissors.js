@@ -29,3 +29,15 @@ function getHumanChoice () {
 }
 
 console.log(getHumanChoice());
+
+var humanScore = 0;
+var computerScore = 0;
+
+function playRound(humanChoice, computerChoice) {
+
+}
+
+const humanSelection = getHumanChoice();
+const computerSelection = getComputerChoice();
+
+playRound(humanSelection, computerSelection);
