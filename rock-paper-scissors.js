@@ -34,7 +34,30 @@ var humanScore = 0;
 var computerScore = 0;
 
 function playRound(humanChoice, computerChoice) {
-
+    // Logic for Rock as human choice
+    if (humanChoice == 1 && computerChoice == 0) {
+        console.log("Draw! Rock ties with Rock");
+    } else if (humanChoice == 1 && computerChoice == 1) {
+        console.log("You lose! Paper beats Rock");
+    } else if (humanChoice == 1 && computerChoice == 2) {
+        console.log("You win! Rock beats Scissors");  
+    }
+    // Logic for Paper as human choice
+    else if (humanChoice == 2 && computerChoice == 0) {
+        console.log("You win! Paper beats Rock");
+    } else if (humanChoice == 2 && computerChoice == 1) {
+        console.log("Draw! Paper ties with Paper");
+    } else if (humanChoice == 2 && computerChoice == 2) {
+        console.log("You lose! Scissors beats Paper");
+    } 
+    // Logic for Scissors as human choice
+    else if (humanChoice == 3 && computerChoice == 0) {
+        console.log("You lose! Rock beats Scissors");
+    } else if (humanChoice == 3 && computerChoice == 1) {
+        console.log("You win! Scissors beats Paper");
+    } else if (humanChoice == 2 && computerChoice == 0) {
+        console.log("Draw! Scissors ties with Scissors");
+    }    
 }
 
 const humanSelection = getHumanChoice();
