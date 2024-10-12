@@ -17,8 +17,9 @@ function getComputerChoice () {
 
 console.log(getComputerChoice());
 
+const humanChoice = prompt("Choose Rock, Paper, or Scissors by inputting 1, 2, or 3",  "type 1, 2, or 3")
+
 function getHumanChoice () {
-    let humanChoice = prompt("Choose Rock, Paper, or Scissors by inputting 1, 2, or 3",  "type 1, 2, or 3")
     if (humanChoice == 1) {
         return "Rock";
     } else if (humanChoice == 2) {
@@ -38,6 +39,7 @@ function playRound(humanChoice, computerChoice) {
     if (humanChoice == 1 && computerChoice == 0) {
         console.log("Draw! Rock ties with Rock");
     } else if (humanChoice == 1 && computerChoice == 1) {
+        computerScore++
         console.log("You lose! Paper beats Rock");
     } else if (humanChoice == 1 && computerChoice == 2) {
         console.log("You win! Rock beats Scissors");  
