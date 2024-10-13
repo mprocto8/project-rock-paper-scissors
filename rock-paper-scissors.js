@@ -6,15 +6,12 @@ function getComputerChoice () {
     const randomChoice = Math.floor(Math.random() * choices.length);
     return choices[randomChoice];
 }
-console.log(getComputerChoice());
 
 // Logic for getting human choice
 function getHumanChoice() {
     const humanChoice = prompt("Enter Rock, Paper, or Scissors",  "Rock, Paper, or Scissors");
     return humanChoice.toLowerCase();
 }
-
-console.log(getHumanChoice());
 
 let humanScore = 0;
 let computerScore = 0; 
