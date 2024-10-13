@@ -25,21 +25,23 @@ function playRound(humanChoice, computerChoice) {
 
     // Decide winner
     if (humanChoice === computerChoice) {
-        return `Tie! Both participants selected ${humanChoice}.`;
+        console.log(`Tie! Both participants selected ${humanChoice}.`);
     } else if (
     // Human wins
         (humanChoice === 'rock' && computerChoice === 'scissors') ||
         (humanChoice === 'scissors' && computerChoice === 'paper') ||
         (humanChoice === 'paper' && computerChoice === 'rock')
     ) {
-        return `You win! ${humanChoice} beats ${computerChoice}!`;
+        console.log(`You win! ${humanChoice} beats ${computerChoice}!`);
+        humanScore++;
     } else if (
         //Computer wins
         (humanChoice === 'rock' && computerChoice === 'paper') ||
         (humanChoice === 'scissors' && computerChoice === 'rock') ||
         (humanChoice === 'paper' && computerChoice === 'scissors')
     ) { 
-        return `You lose! ${computerChoice} beats ${humanChoice}!`; 
+        console.log(`You lose! ${computerChoice} beats ${humanChoice}!`);
+        computerScore++; 
     }
 }
 
