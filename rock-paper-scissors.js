@@ -56,6 +56,15 @@ function playGame() {
         playRound(humanSelection, computerSelection);
         console.log(`Score - You:${humanScore} - Computer:${computerScore}`)
     }
+
+    // Declare full game winner
+    if (humanScore == computerScore) {
+        console.log(`Tie game! Both participants had ${humanScore}`);
+    } else if (humanScore > computerScore) {
+        console.log( `You Win! You had ${humanScore} points and Computer player had ${computerScore} points!`);
+    } else {
+        console.log(`You Lose! Computer Player had ${computerScore} points and You had ${humanScore} points! `);
+    }
 }
 
 playGame();
