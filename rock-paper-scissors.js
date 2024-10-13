@@ -21,7 +21,8 @@ console.log(getHumanChoice());
 function playRound(humanChoice, computerChoice) {
     //Normalize inputs
     humanChoice = humanChoice.toLowerCase();
-    computerChoice
+    computerChoice = computerChoice.toLowerCase();
+    
     // Logic for Rock as human choice
     if (humanChoice == "1" && computerChoice == 0) {
         console.log("Draw! Rock ties with Rock");
