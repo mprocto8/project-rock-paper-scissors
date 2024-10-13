@@ -45,14 +45,20 @@ function playGame() {
             (humanChoice === 'rock' && computerChoice === 'paper') ||
             (humanChoice === 'scissors' && computerChoice === 'rock') ||
             (humanChoice === 'paper' && computerChoice === 'scissors')
-        ) { 
+        ) {     
             console.log(`You lose! ${computerChoice} beats ${humanChoice}!`);
             computerScore++; 
+        } else {
+            console.log
         }
+    }
+    // Play 5 rounds by calling playRound 5 times
+    for (let i = 0; i < 5; i++) {
+        const humanSelection = getHumanChoice();
+        const computerSelection = getComputerChoice();
+        playRound(humanSelection, computerSelection);
+        console.log(`Score - You:${humanScore} - Computer:${computerScore}`)
     }
 }
 
-const humanSelection = getHumanChoice();
-const computerSelection = getComputerChoice();
-
-playRound(humanSelection, computerSelection);
+playGame();
